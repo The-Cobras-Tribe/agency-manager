@@ -27,7 +27,7 @@ function Grid() {
 
     const [user, loading] = useAuthState(auth)
 
-    return <section className='grid h-screen grid-cols-1 gap-4 p-8 overflow-auto  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
+    return <section className='grid h-screen grid-cols-1 gap-4 p-8 overflow-auto md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         {user && <Clients userId={user.uid} />}
     </section>
 }
@@ -45,7 +45,7 @@ function Clients({ userId }: { userId: string }) {
                     id={client.id}
                     clientName={client.data().clientName}
                     contractorName={client.data().contractorName}
-                    date={new Date(client.data().date.seconds * 1000).toLocaleDateString()}
+                    date={client.data().date && client.data().date.seconds && new Date(client.data().date.seconds * 1000).toLocaleDateString()}
                     status={client.data().status}
                     onClick={() => { }}
                 />
