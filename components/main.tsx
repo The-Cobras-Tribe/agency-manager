@@ -42,6 +42,27 @@ function Main() {
                 status: 'Pending'
               });
 
+              const userId = user.uid;
+              const clientId = newClient.id;
+
+
+              await setDoc(doc(db, 'users', userId, 'clients', clientId), {
+                projectDescription: String(undefined),
+                clientInformation: String(undefined),
+                contractorInformation: String(undefined),
+                lastUpdated: serverTimestamp()
+              }, { merge: true })
+              await setDoc(doc(db, 'users', userId, 'clients', clientId, 'cards', 'notes'), {
+                notes: String(undefined),
+                lastUpdated: serverTimestamp()
+              })
+
+              await setDoc(doc(db, 'users', userId, 'clients', clientId, 'cards', 'todo'), {
+                todo: String(undefined),
+                lastUpdated: serverTimestamp()
+              })
+
+
               console.log(client);
 
               window.open(`/client/${newClient.id}`, '_self');
