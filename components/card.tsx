@@ -14,18 +14,15 @@ function Card(props: any) {
                     }
                 }>
                 <div className="px-4 py-5 sm:px-6">
-                    <div className="text-lg leading-5 font-medium text-gray-900 dark:text-slate-100">
+                    <div className="text-lg font-medium leading-5 text-gray-900 dark:text-slate-100">
                         {clientName}
                     </div>
                     <div className="mt-2 text-slate-700 dark:text-slate-300">
 
-                        <p className="text-sm leading-5 font-medium">
+                        <p className="text-sm font-medium leading-5">
                             Contractor: {contractorName}
                         </p>
-                        <p className="text-sm leading-5 font-medium">
-                            Due Date: {date}
-                        </p>
-                        <p className="text-sm leading-5 font-medium">
+                        <p className="text-sm font-medium leading-5">
                             Status: {status}
                         </p>
                     </div>
