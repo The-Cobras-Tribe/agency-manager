@@ -1,10 +1,11 @@
 import FAB from "./fab";
+import Grid from "./grid";
 
 function Main() {
   return (
-    <div className='h-screen'>
+    <div>
       <FAB
-        className='absolute bottom-4 right-4'
+        className='absolute bottom-8 right-8'
         icon={
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -22,6 +23,9 @@ function Main() {
           </svg>
         }
       />
+
+      <Grid />
+
     </div>
   );
 }

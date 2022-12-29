@@ -13,7 +13,7 @@ function App() {
         <link rel='icon' href='https://github.com/acutewoof.png' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
-      <main className='h-screen bg-hero dark:bg-hero-dark'>
+      <main className='h-screen bg-graph-paper dark:bg-graph-paper-dark'>
         <Main />
       </main>
     </>
